@@ -13,6 +13,9 @@ builder.Services.AddHostedService<NuGetDownloader>();
 var host = builder.Build();
 host.Run();
 
+Console.Write("läuft...");
+Console.ReadLine();
+
 static IHostApplicationBuilder ConfigureOpenTelemetry(IHostApplicationBuilder builder)
 {
     builder.Logging.AddOpenTelemetry(logging =>

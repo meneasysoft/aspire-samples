@@ -4,16 +4,52 @@
 		{
 			"type": "dotnet",
 			"task": "watch ConsoleApp",
-			"file": "${workspaceFolder}/samples/StandaloneDashboard/ConsoleApp/ConsoleApp.csproj",
+			"file": "${workspaceFolder}/samples/AspireWithJavaScript/AspireJavaScript.MinimalApi/AspireJavaScript.MinimalApi.csproj",
 			"problemMatcher": [],
 			"label": "dotnet: watch ConsoleApp"
 		},
 		{
 			"type": "dotnet",
 			"task": "watch ConsoleApp",
-			"file": "/workspaces/aspire-samples/samples/StandaloneDashboard/ConsoleApp/ConsoleApp.csproj",
+			"file": "/workspaces/samples/AspireWithJavaScript/AspireJavaScript.MinimalApi/AspireJavaScript.MinimalApi.csproj",
 			"problemMatcher": [],
 			"label": "dotnet: watch ConsoleApp"
-		}
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/samples/AspireWithJavaScript/AspireJavaScript.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/samples/AspireWithJavaScript/AspireJavaScript.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/samples/AspireWithJavaScript/AspireJavaScript.sln"
+            ],
+            "problemMatcher": "$msCompile"
+        }
 	]
 }
