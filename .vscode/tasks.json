@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "dotnet",
+			"task": "watch ConsoleApp",
+			"file": "${workspaceFolder}/samples/StandaloneDashboard/ConsoleApp/ConsoleApp.csproj",
+			"problemMatcher": [],
+			"label": "dotnet: watch ConsoleApp"
+		},
+		{
+			"type": "dotnet",
+			"task": "watch ConsoleApp",
+			"file": "/workspaces/aspire-samples/samples/StandaloneDashboard/ConsoleApp/ConsoleApp.csproj",
+			"problemMatcher": [],
+			"label": "dotnet: watch ConsoleApp"
+		}
+	]
+}
