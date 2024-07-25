@@ -1,6 +1,7 @@
 ﻿var builder = DistributedApplication.CreateBuilder(args);
 
 var weatherApi = builder.AddProject<Projects.AspireJavaScript_MinimalApi>("weatherapi")
+    .WithHttpEndpoint(name: "weatherapi", port: 9999, isProxied: false)
     .WithExternalHttpEndpoints();
 
 /*
