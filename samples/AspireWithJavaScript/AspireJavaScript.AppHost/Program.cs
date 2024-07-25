@@ -11,7 +11,7 @@ builder.AddNpmApp("angular", "../AspireJavaScript.Angular")
 
 builder.AddNpmApp("react", "../AspireJavaScript.React")
     .WithReference(weatherApi)
-    .WithEnvironment("BROWSER", "none") // Disable opening browser on npm start
+    //.WithEnvironment("BROWSER", "none") // Disable opening browser on npm start
     .WithHttpEndpoint(env: "PORT")
     .WithExternalHttpEndpoints()
     .PublishAsDockerFile();
